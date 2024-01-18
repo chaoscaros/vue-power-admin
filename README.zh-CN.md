@@ -1,8 +1,8 @@
 <div align="center">
   <p align="center"><img alt="Vue-Power-Admin" align="center" src="./.github/logo.svg" width="100" /></p><br>
   <p align="center">
-    <a href="https://github.com/nodejs/release#release-schedule"><img src="https://img.shields.io/badge/node-%5E14.18.0%20%7C%7C%20%3E%3D16.0.0-brightgreen?style=flat-square&logo=node.js" alt="Node"></a>
-    <a href="https://github.com/zhou-tao/vue-power-admin/releases"><img src="https://img.shields.io/badge/release-v1.x-important?style=flat-square&logo=github" alt="release"></a>
+    <a href="https://github.com/zhou-tao/vue-power-admin/releases"><img src="https://img.shields.io/github/v/release/zhou-tao/vue-power-admin.svg" alt="release version"></a>
+    <a href="https://app.netlify.com/sites/vue-power-admin/deploys"><img src="https://api.netlify.com/api/v1/badges/309500b2-63d7-4313-a4e0-24ac7eb5ccab/deploy-status" alt="deploy status"></a>
   </p>
   <h1>Vue Power Admin</h1>
 </div>
@@ -11,7 +11,7 @@
 
 ### :loudspeaker: 简介
 
-> [Vue Power Admin](https://zhou-tao.github.io/vue-power-admin) 是一个标准的中后台前端开发模板。基于当下最流行的 Vue3 + Typescript 技术栈构建，使用 Element-Plus 作为 UI 库。
+> [Vue Power Admin](https://vue-power-admin.netlify.app) 是一个标准的中后台前端开发模板。基于当下最流行的 Vue3 + Typescript 技术栈构建，使用 Element-Plus 作为 UI 库。
 
 ### :rocket: 特性
 
@@ -23,7 +23,7 @@
 - **Unocss** 使用最轻量的原子化 CSS 解决方案。
 - **组件** 封装大量中后台常用组件。
 - **生成器** 集成了代码模版生成器，提高开发效率。
-- **规范** 使用 husky 集成 eslint 统一代码规范，搭配 commitlint 校验 git message（内置 cz-git 交互）。
+- **规范** 使用 simple-git-hooks 集成 eslint 统一代码规范，搭配 commitlint 校验 git message（内置 cz-git 交互）。
 - **模拟数据** 使用 Mockjs 支持开发环境的真实接口以及生产环境的模拟数据注入，告别手动编写数据。
 
 ### :alarm_clock: 使用
@@ -50,10 +50,8 @@ pnpm dev
 
 非常欢迎您为本仓库提交PR或者Issues! 
 
-特别感谢所有 [Vue Power Admin](https://zhou-tao.github.io/vue-power-admin) 的贡献者！
+特别感谢所有 [Vue Power Admin](https://github.com/zhou-tao/vue-power-admin/graphs/contributors) 的贡献者！
 
 ### :bookmark_tabs: License
 
-[MIT](https://github.com/zhou-tao/vue-power-admin/LICENSE)
-
-Copyright (c) 2022 zhou-tao
+[MIT](./LICENSE) License &copy; 2022-PRESENT toryz

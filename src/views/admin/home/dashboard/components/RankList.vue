@@ -1,6 +1,6 @@
 <script setup lang="ts" name="RankList">
   const contributors = [
-    { name: 'Tooz', commits: 192, MoM: 0.2117 },
+    { name: 'Toryz', commits: 192, MoM: 0.2117 },
     { name: 'Dongs', commits: 123, MoM: 0.1223 },
     { name: 'EvanYou', commits: 90, MoM: -0.1131 },
     { name: 'AntFu', commits: 68, MoM: 0.0889 },
@@ -10,14 +10,14 @@
   const rankClass = ['first', 'second', 'third']
 
   function getPercent(val: number) {
-    return `${val > 0 ? '+' : ''}${(val*100).toFixed(2)}%`
+    return `${val > 0 ? '+' : ''}${(val * 100).toFixed(2)}%`
   }
 </script>
 
 <template>
   <ul list="none" pl="0">
     <li v-for="({ name, commits, MoM }, index) in contributors" :key="name" my="4.5">
-      <div flex justify="between" items="center">
+      <div flex="center" justify="between">
         <div flex items="center">
           <div
             w="8"
@@ -29,7 +29,7 @@
             mr="4"
             :class="rankClass[index] || 'base'"
           >
-            {{ index+1 }}
+            {{ index + 1 }}
           </div>
           <div flex="~ col">
             <span>{{ name }}</span>
@@ -38,9 +38,11 @@
         </div>
         <div flex items="center">
           <span mr="2" text="green-5" :class="{ decline: MoM < 0 }">
-            <i-app-growth />
+            <div i-app-growth />
           </span>
-          <div font="medium" w="18">{{ getPercent(MoM) }}</div>
+          <div font="medium" w="18">
+            {{ getPercent(MoM) }}
+          </div>
         </div>
       </div>
     </li>

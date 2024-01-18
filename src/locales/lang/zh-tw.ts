@@ -36,7 +36,7 @@ export default {
       user: '用戶管理',
       userDetail: '用戶詳情',
       department: '部門管理',
-      post: '崗位管理',
+      post: '崗位管理'
     },
     component: {
       root: '組件',
@@ -44,7 +44,8 @@ export default {
       table: '表格',
       splitPane: '分欄器',
       icon: '圖標',
-      editor: '編輯器'
+      editor: '編輯器',
+      verificationCode: '驗證碼'
     },
     feat: {
       root: '功能',

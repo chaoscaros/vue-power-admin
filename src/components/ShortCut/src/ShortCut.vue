@@ -1,7 +1,8 @@
 <script setup lang="ts" name="ShortCut">
   import { Icon } from '@iconify/vue'
+
   defineProps<{
-    title: string,
+    title: string
     icon: string
   }>()
 </script>
@@ -12,9 +13,8 @@
       w-12
       h-12
       rounded
-      bg="light"
-      hover:bg="light_hover"
-      center
+      bg="light hover:light_hover"
+      flex="center"
       mb="4"
       cursor="pointer"
     >

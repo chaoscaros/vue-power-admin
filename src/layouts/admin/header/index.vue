@@ -1,4 +1,5 @@
 <script setup lang="ts" name="LayoutHeader">
+  import { useI18n } from 'vue-i18n'
   import Breadcrumb from './components/Breadcrumb.vue'
   import ThemeSwitch from '@/components/ThemeSwitch'
   import LogoView from '@/layouts/admin/sider/components/LogoView.vue'
@@ -8,9 +9,7 @@
   import { isSupported, isFullScreen, toggleFullScreen, autoRemoveListener } from '@/hooks/web/useFullScreen'
   import { MenuLayout } from '@/enums/menuEnum'
   import { getLocaleTypes } from '@/locales'
-  import { useI18n } from 'vue-i18n'
   import { useMessage } from '@/hooks/web/useMessage'
-  import { storeToRefs } from 'pinia'
 
   const { $message } = useMessage()
   const { username, avatar } = storeToRefs(useUserStore())
@@ -32,37 +31,34 @@
     locale.value = language
     $message.success(`${t('header.changeLocale')}: ${name}`)
   }
-
 </script>
 
 <template>
   <div
     h="header"
     px-6
-    flex
-    items="center"
+    flex="center"
     justify="between"
-    border-b="solid root_light"
-    dark:border-b="root_dark"
+    border-b="solid root_light dark:root_dark"
   >
     <div flex items="center" gap="6">
       <span v-if="isVerticalMenu" cursor="pointer" leading="0" @click="settingStore.toggleCollapse()">
-        <i-ep-expand v-show="menuCollapsed" />
-        <i-ep-fold v-show="!menuCollapsed" />
+        <div v-show="menuCollapsed" i-ep-expand />
+        <div v-show="!menuCollapsed" i-ep-fold />
       </span>
-      <LogoView mr="6" v-else />
+      <LogoView v-else mr="6" />
       <Breadcrumb v-if="hasBreadcrumb && isVerticalMenu" />
     </div>
     <Menu v-if="!isVerticalMenu" :mode="MenuLayout.HORIZONTAL" />
     <div flex items="center" gap="5">
-      <div class="icon-view" text="13px!" v-if="isSupported" @click="toggleFullScreen">
-        <i-ri-fullscreen-fill v-show="!isFullScreen" />
-        <i-ri-fullscreen-exit-fill v-show="isFullScreen" />
+      <div v-if="isSupported" class="icon-view" @click="toggleFullScreen">
+        <div v-show="!isFullScreen" i-ri-fullscreen-fill />
+        <div v-show="isFullScreen" i-ri-fullscreen-exit-fill />
       </div>
       <el-dropdown>
         <el-badge is-dot leading="none">
           <div class="icon-view">
-            <i-ep-bell-filled />
+            <div i-ep-bell-filled />
           </div>
         </el-badge>
         <template #dropdown>
@@ -75,13 +71,15 @@
       </el-dropdown>
       <el-dropdown v-show="hasLocales">
         <div class="icon-view">
-          <i-app-locale text="18px!" />
+          <div i-app-locale text="18px!" />
         </div>
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item v-for="({ value, name }, i) in localeTypes" :key="value" :divided="!!i" @click="handleLocaleChange(value, name)">
-              <div inline-block w-18>{{ name }}</div>
-              <i-ri-check-fill v-if="value === locale" />
+              <div inline-block w-18>
+                {{ name }}
+              </div>
+              <div v-if="value === locale" i-ri-check-fill />
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -96,13 +94,13 @@
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item @click="$router.push({ path: '/personal/index', query: { tab: 'password' } })">
-                <i-ep-lock />{{ t('header.setup') }}
+                <div i-ep-lock mr="1" />{{ t('header.setup') }}
               </el-dropdown-item>
               <el-dropdown-item
                 divided
                 @click="$router.replace('/login?redirect=logout')"
               >
-                <i-ep-switch-button />
+                <div i-ep-switch-button mr="1" />
                 {{ $t('header.logout') }}
               </el-dropdown-item>
             </el-dropdown-menu>
@@ -115,7 +113,7 @@
 
 <style scoped lang="scss">
 .icon-view {
-  @apply w-8 h-8 rounded-full flex justify-center items-center bg-light cursor-pointer text-15px transition-base hover:bg-light_hover;
+  @apply w-8 h-8 rounded-full flex-center bg-light cursor-pointer text-15px transition-base hover:bg-light_hover;
 }
 
 :deep(.el-dropdown [role=button]) {

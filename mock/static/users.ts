@@ -8,7 +8,7 @@ export const userInfo = {
   id: 0,
   name: 'admin',
   userId: 1,
-  username: 'Tooz',
+  username: 'Toryz',
   gender: '1',
   avatar: 'https://avatars.githubusercontent.com/u/36221207?v=4',
   deptCode: '007',
@@ -21,5 +21,5 @@ export const userInfo = {
   roles: [
     { id: 0, code: 'ADMIN', name: '管理员', menu: [] }
   ],
-  security: true //密码安全性
+  security: true // 密码安全性
 }

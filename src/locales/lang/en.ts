@@ -36,7 +36,7 @@ export default {
       user: 'user',
       userDetail: 'userDetail',
       department: 'department',
-      post: 'post',
+      post: 'post'
     },
     component: {
       root: 'component',
@@ -44,7 +44,8 @@ export default {
       table: 'table',
       splitPane: 'splitPane',
       icon: 'icon',
-      editor: 'editor'
+      editor: 'editor',
+      verificationCode: 'verificationCode'
     },
     feat: {
       root: 'feature',

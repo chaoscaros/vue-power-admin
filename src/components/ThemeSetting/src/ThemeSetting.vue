@@ -1,11 +1,10 @@
 <script setup lang="ts" name="ThemeSetting">
-  import ThemeSwitch from '@/components/ThemeSwitch'
   import ThemeColorPicker from './ThemeColorPicker.vue'
+  import ThemeSwitch from '@/components/ThemeSwitch'
   import { MenuLayout } from '@/enums/menuEnum'
   import { useSettingStore } from '@/store/modules/setting'
   import { getCssVar, setCssVar } from '@/hooks/web/useCssVar'
   import { CSSVarEnum } from '@/enums/appEnum'
-  import { storeToRefs } from 'pinia'
 
   const settingStore = useSettingStore()
   const {
@@ -30,12 +29,11 @@
     settingStore.toggleFpLoading()
     return true
   }
-
 </script>
 
 <template>
   <div
-    center
+    flex="center"
     fixed
     z-3
     right-0
@@ -46,12 +44,11 @@
     text="1.7rem"
     rounded-l
     cursor-pointer
-    op-80
-    hover:op-100
+    op="80 hover:100"
     transition-base
     @click="drawer = true"
   >
-    <i-emoji-artist-palette />
+    <div i-fluent-emoji-flat-artist-palette />
   </div>
   <el-drawer
     v-model="drawer"
@@ -62,15 +59,17 @@
     <div flex="~ col" items="between">
       <el-divider>主题</el-divider>
       <ThemeSwitch type="switch" />
-      <el-divider mt-12>导航栏</el-divider>
-      <div center gap="6" text="5xl regular">
+      <el-divider mt-12>
+        导航栏
+      </el-divider>
+      <div flex="center" gap="6" text="5xl regular">
         <el-tooltip
           effect="dark"
           content="侧边菜单"
           placement="bottom"
         >
           <span :class="{ active: isVerticalMenu }" @click="settingStore.setLayout(MenuLayout.VERTICAL)">
-            <i-app-layout cursor="pointer" />
+            <div i-app-layout cursor="pointer" />
           </span>
         </el-tooltip>
         <el-tooltip
@@ -79,13 +78,17 @@
           placement="bottom"
         >
           <span :class="{ active: !isVerticalMenu }" @click="settingStore.setLayout(MenuLayout.HORIZONTAL)">
-            <i-app-layout transform rotate-90 cursor="pointer" />
+            <div i-app-layout transform rotate-90 cursor="pointer" />
           </span>
         </el-tooltip>
       </div>
-      <el-divider mt-12>主题色</el-divider>
+      <el-divider mt-12>
+        主题色
+      </el-divider>
       <ThemeColorPicker />
-      <el-divider mt-12>界面</el-divider>
+      <el-divider mt-12>
+        界面
+      </el-divider>
       <div w-full flex="~ col" gap="2">
         <div class="between">
           <span>面包屑</span>
@@ -105,14 +108,18 @@
           <el-switch v-model="hasFooter" inline-prompt active-text="开" inactive-text="关" />
         </div>
       </div>
-      <el-divider mt-12>功能</el-divider>
+      <el-divider mt-12>
+        功能
+      </el-divider>
       <div w-full flex="~ col" gap="2">
         <div class="between">
           <span>国际化</span>
           <el-switch v-model="hasLocales" inline-prompt active-text="开" inactive-text="关" />
         </div>
       </div>
-      <el-divider mt-12>动效</el-divider>
+      <el-divider mt-12>
+        动效
+      </el-divider>
       <div w-full flex="~ col" gap="2">
         <div class="between">
           <span>首屏动画</span>
@@ -137,6 +144,6 @@
 }
 
 .between {
-  @apply flex justify-between items-center;
+  @apply flex-center justify-between;
 }
 </style>

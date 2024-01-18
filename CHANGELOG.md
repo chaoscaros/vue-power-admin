@@ -1,3 +1,48 @@
+# [1.2.0](https://github.com/zhou-tao/vue-power-admin/compare/v1.1.3...v1.2.0) (2023-08-18)
+
+
+### Bug Fixes
+
+* git hook for commit-msg ([c781660](https://github.com/zhou-tao/vue-power-admin/commit/c7816609ce6242dcf656ecee5ff33bd39c5507b4))
+* **layout:** :bug: disable closable when only one tab ([e227cdf](https://github.com/zhou-tao/vue-power-admin/commit/e227cdf6f3b5a7423b56776d189d9cf9ed987f52))
+* optimize handle ts error ([96a167e](https://github.com/zhou-tao/vue-power-admin/commit/96a167ec2349aded60b67cd26b3949ab92be7a39))
+* typecheck scripts ([5e0c9a8](https://github.com/zhou-tao/vue-power-admin/commit/5e0c9a876e510d137d78fc735beff0ee60d7b78d))
+
+
+### Features
+
+* :sparkles: optimize unocss usage ([5c18320](https://github.com/zhou-tao/vue-power-admin/commit/5c183206af8689e8d31d85e7813ff7a348476876))
+* :sparkles: use unocss icon presets instead of unplugin-icons ([f9a0ab0](https://github.com/zhou-tao/vue-power-admin/commit/f9a0ab051237fd93eeef637d09ffb5c0f21233c6))
+* add plugin for env parser ([5ebe5a8](https://github.com/zhou-tao/vue-power-admin/commit/5ebe5a8cfdbbd1fa28928bbc5c8c0191fcd83dca))
+* **plop:** migrate to ESM ([6e0ae54](https://github.com/zhou-tao/vue-power-admin/commit/6e0ae546a88ba47a5cb5e854187ae4503e485424))
+
+
+
+## [1.1.3](https://github.com/zhou-tao/vue-power-admin/compare/v1.1.2...v1.1.3) (2023-07-05)
+
+
+### Bug Fixes
+
+* **component:** :bug: `VerificationCode` interaction in modal ([db51bba](https://github.com/zhou-tao/vue-power-admin/commit/db51bbaa1ffd125842348e287e15cc235a25c724))
+
+
+
+## [1.1.2](https://github.com/zhou-tao/vue-power-admin/compare/v1.1.1...v1.1.2) (2023-06-21)
+
+
+### Features
+
+* :sparkles: add verification code login ([ddfc98a](https://github.com/zhou-tao/vue-power-admin/commit/ddfc98a46883c39b7f6b967d2f90708cb4ea537d))
+* **component:** :sparkles: add verification code ([048fc94](https://github.com/zhou-tao/vue-power-admin/commit/048fc94f5a96f0748e83d45a134b351428d921ea))
+* **verification-code:** :sparkles: optimize card shape ([f043ce7](https://github.com/zhou-tao/vue-power-admin/commit/f043ce7fe83c12d69fcee62b222e8cfb3d4cc8ac))
+
+
+### Performance Improvements
+
+* **v-permission:** :zap: optimize router call in directive hook ([5a9de56](https://github.com/zhou-tao/vue-power-admin/commit/5a9de564132caaebf4f246188e837d52db92c558))
+
+
+
 ## [1.1.1](https://github.com/zhou-tao/vue-power-admin/compare/v1.1.0...v1.1.1) (2023-06-09)
 
 

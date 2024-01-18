@@ -1,5 +1,6 @@
-const { notEmpty } = require('../utils.js')
-module.exports = {
+import { notEmpty } from '../utils.js'
+
+export default {
   description: '生成store基础模板',
   prompts: [{
     type: 'input',
@@ -18,7 +19,7 @@ module.exports = {
     ],
     default: 'no'
   }],
-  actions ({ name, persist }) {
+  actions({ name, persist }) {
     const actions = [{
       type: 'add',
       path: `src/store/modules/${name}.ts`,

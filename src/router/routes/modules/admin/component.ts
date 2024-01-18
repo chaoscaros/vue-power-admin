@@ -1,5 +1,5 @@
 import AdminLayout from '@/layouts/admin/index.vue'
-import { AppRouteConfig } from '@/router/types'
+import type { AppRouteConfig } from '@/router/types'
 
 const ComponentRoute: AppRouteConfig = {
   path: '/component',
@@ -47,6 +47,14 @@ const ComponentRoute: AppRouteConfig = {
     component: () => import('@/views/admin/component/editor/index.vue'),
     meta: {
       title: 'menu.component.editor'
+    }
+  },
+  {
+    path: 'verification-code',
+    name: 'verification_code',
+    component: () => import('@/views/admin/component/verification-code/index.vue'),
+    meta: {
+      title: 'menu.component.verificationCode'
     }
   }]
 }
